@@ -22,8 +22,11 @@ const addCours=(title,date)=>{
 }
 const addLiCourse=(title,createdAt,id)=>{
     const li =document.createElement("li");
-    li.textContent=title;
     li.setAttribute("class","list-group-item list-group-item-action")
+
+    const h5 =document.createElement("h5");
+    h5.textContent=title;
+    li.append(h5)
     
     const span =document.createElement("span");
     span.textContent=createdAt.toDate().toDateString();
